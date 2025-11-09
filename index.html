@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Platform</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/games.css">
+  <link rel="stylesheet" href="css/modes.css">
+  <link rel="stylesheet" href="css/game-container.css">
+  
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- HOME SCREEN -->
+  <!-- ============================================ -->
+  <section id="home-view" class="view active">
+    <div class="particles-bg" id="particles-js"></div>
+    
+    <div class="home-container">
+      <div class="home-content" data-aos="fade-up">
+        <h1 class="home-title">
+          <span class="title-line">ULTIMATE</span>
+          <span class="title-line glow">GAMING</span>
+          <span class="title-line">ARCADE</span>
+        </h1>
+        
+        <p class="home-subtitle" data-aos="fade-up" data-aos-delay="200">
+          Challenge yourself with amazing games
+        </p>
+        
+        <button class="btn-start" id="btn-start-gaming" data-aos="zoom-in" data-aos-delay="400">
+          <span class="btn-icon">🎮</span>
+          <span class="btn-text">START GAMING</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- GAMES SELECTION SCREEN -->
+  <!-- ============================================ -->
+  <section id="games-view" class="view">
+    <div class="games-header">
+      <button class="btn-back" id="btn-back-home">
+        <i class="fas fa-arrow-left"></i> Back
+      </button>
+      <h2 class="games-title">SELECT YOUR GAME</h2>
+      <div class="placeholder"></div>
+    </div>
+
+    <div class="games-grid" id="games-grid">
+      <!-- Games will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- MODE SELECTION MODAL -->
+  <!-- ============================================ -->
+  <div id="modes-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content" data-aos="zoom-in">
+      <button class="modal-close" id="modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <h3 class="modal-title" id="modal-game-title">Select Mode</h3>
+      
+      <div class="modes-container" id="modes-container">
+        <!-- Modes will be dynamically inserted -->
+      </div>
+      
+      <button class="btn-play" id="btn-play-game">
+        <i class="fas fa-play"></i> PLAY NOW
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- GAME CONTAINER -->
+  <!-- ============================================ -->
+  <section id="game-view" class="view">
+    <div class="game-header">
+      <button class="btn-back-game" id="btn-back-games">
+        <i class="fas fa-arrow-left"></i> Back to Games
+      </button>
+      <h3 class="game-current-title" id="game-current-title">Game Title</h3>
+      <button class="btn-restart-game" id="btn-restart-game">
+        <i class="fas fa-redo"></i>
+      </button>
+    </div>
+    
+    <div class="game-container" id="game-container">
+      <!-- Game content loaded here -->
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- JavaScript Files -->
+  <!-- ============================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/ui-components.js"></script>
+  <script src="js/game-loader.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
